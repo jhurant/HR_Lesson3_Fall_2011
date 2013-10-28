@@ -1,0 +1,14 @@
+﻿@model HR_Lesson3_Fall_2011.web.Models.Entities.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for @Model.Name</h2>
+
+<p>
+    @Model.Bio
+</p>
+
+<strong>@Model.DateHired.ToShortDateString()</strong>
+

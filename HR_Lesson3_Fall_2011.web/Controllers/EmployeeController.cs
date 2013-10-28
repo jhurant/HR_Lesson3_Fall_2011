@@ -1,9 +1,9 @@
 ﻿using HR_Lesson3_Fall_2011.web.Models.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Linq;
 
 namespace HR_Lesson3_Fall_2011.web.Controllers
 {
@@ -35,6 +35,12 @@ namespace HR_Lesson3_Fall_2011.web.Controllers
         {
             var model = employees;
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var employee = employees.Where(emp => emp.Id == id).SingleOrDefault();
+            return View(employee);
         }
 
     }
