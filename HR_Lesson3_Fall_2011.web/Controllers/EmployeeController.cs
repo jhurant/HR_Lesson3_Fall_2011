@@ -39,6 +39,7 @@ namespace HR_Lesson3_Fall_2011.web.Controllers
 
         public ActionResult Details(int id)
         {
+            //System.Threading.Thread.Sleep(3000);
             var employee = employees.Where(emp => emp.Id == id).SingleOrDefault();
             return View(employee);
         }

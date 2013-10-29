@@ -8,3 +8,11 @@
 
     return false;
 });
+
+$("a.employee-link-dialog").click(function () {
+    $.get(this.href, function (data) {
+        $(".modal-body").html(data);
+        $(".modal").modal("show");
+    });
+    return false;
+});

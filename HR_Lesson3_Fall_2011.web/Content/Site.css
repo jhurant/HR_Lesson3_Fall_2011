@@ -5,3 +5,7 @@
 div.employee-details {
     display: none;
 }
+
+ul.employee-list li {
+    margin-top: 10px;
+}
