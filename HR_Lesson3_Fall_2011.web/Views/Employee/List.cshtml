@@ -8,6 +8,12 @@
 <ul>
     @foreach (var employee in Model)
     {
-        <li>@Html.ActionLink(employee.Name, "Details", new{id = employee.Id})</li>
+        <li>
+            @Html.ActionLink(employee.Name, "Details", new { id = employee.Id }, new {@class="employee-link" })
+            <div class="employee-details alert alert-success">
+                <p>@employee.Bio</p>
+                <strong>@employee.DateHired.ToShortDateString()</strong>
+            </div>
+        </li>
     }
 </ul>
