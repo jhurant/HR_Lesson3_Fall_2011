@@ -2,9 +2,9 @@
     var li = $(this).parents("li");
     var detail = $(".employee-details", li);
     if (detail.is(":visible"))
-        detail.hide("slow");
+        detail.slideUp();
     else
-        detail.show("slow");
+        detail.slideDown();
 
     return false;
 });
